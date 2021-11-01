@@ -1,7 +1,3 @@
-#!/usr/bin/env node
-
-const array = require('./array')
-
 function createLargeSortedArray (length = 1000) {
   return Array.from(Array(length)).map(() => Math.floor(Math.random() * 10000)).sort((a, b) => a - b)
 }
@@ -14,12 +10,12 @@ function binarySearch (array, value) {
     numIterations++
     let mid = Math.floor((low + high) / 2)
 
-    if (array[mid] === value) return [array[mid], numIterations]
+    if (array[mid] === value) return [array[mid], mid, numIterations]
     else if (array[mid] < value) low = mid + 1 
     else high = mid -1
   }
 
-  return [-1, numIterations]
+  return ['Not Found', -1, numIterations]
 }
 
 function linearSearch (array, value) {
@@ -29,15 +25,15 @@ function linearSearch (array, value) {
     numIterations++
 
     if (array[i] === value) {
-      return [array[i], numIterations]
+      return [array[i], i, numIterations]
     }
   }
 
-  return [-1, numIterations]
+  return ['Not Found', -1, numIterations]
 }
 
-const [ value1, numIterations1 ] = binarySearch(array, Number(process.argv[2]))
-const [ value2, numIterations2 ] = linearSearch(array, Number(process.argv[2]))
-
-console.log(`Binary Search - Value found: ${value1} Iterations: ${numIterations1}`)
-console.log(`Linear Search - Value found: ${value2} Iterations: ${numIterations2}`)
+module.exports = {
+  createLargeSortedArray,
+  binarySearch,
+  linearSearch
+}
