@@ -14,10 +14,6 @@ function divide (a, b) {
   return a / b
 }
 
-function something () {
-  return null
-}
-
 module.exports = {
   add,
   subtract,
