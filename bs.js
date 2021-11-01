@@ -6,31 +6,31 @@ function createLargeSortedArray (length = 1000) {
 
 function binarySearch (array, value) {
   let numIterations = 0
-  let low = 0
-  let high = array.length - 1
-  let mid = 0
+  let low = 0, high = array.length - 1
+
   while (low <= high) {
     numIterations++
-    mid = Math.floor((low + high) / 2)
-    if (array[mid] === value) {
-      return [array[mid], numIterations]
-    }
+    let mid = Math.floor((low + high) / 2)
 
+    if (array[mid] === value) return [array[mid], numIterations]
     else if (array[mid] < value) low = mid + 1 
-    
     else high = mid -1
   }
+
   return [-1, numIterations]
 }
 
 function linearSearch (array, value) {
   let numIterations = 0
+
   for (let i = 0; i < array.length; i++) {
     numIterations++
+
     if (array[i] === value) {
       return [value, numIterations]
     }
   }
+
   return [-1, numIterations]
 }
 
