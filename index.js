@@ -15,15 +15,6 @@ function divide (a, b) {
 }
 
 
-
-
-
-
-
-
-
-
-
 module.exports = {
   add,
   subtract,
