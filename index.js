@@ -14,6 +14,9 @@ function divide (a, b) {
   return a / b
 }
 
+// ga .
+// gc -m "this is a commit message"
+
 module.exports = {
   add,
   subtract,
