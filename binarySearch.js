@@ -34,8 +34,8 @@ function linearSearch (array, value) {
   return [-1, numIterations]
 }
 
-const [ value1, numIterations1 ] = binarySearch(array, 5784)
-const [ value2, numIterations2 ] = linearSearch(array, 5784)
+const [ value1, numIterations1 ] = binarySearch(array, Number(process.argv[2]))
+const [ value2, numIterations2 ] = linearSearch(array, Number(process.argv[2]))
 
 console.log(`Binary Search - Value found: ${value1} Iterations: ${numIterations1}`)
 console.log(`Linear Search - Value found: ${value2} Iterations: ${numIterations2}`)
