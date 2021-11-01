@@ -22,6 +22,5 @@ module.exports = {
   add,
   subtract,
   multiply,
-  divide,
-  pretendIAmReallyAdvanced
+  divide
 }
