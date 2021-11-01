@@ -27,7 +27,7 @@ function linearSearch (array, value) {
     numIterations++
 
     if (array[i] === value) {
-      return [value, numIterations]
+      return [array[i], numIterations]
     }
   }
 
