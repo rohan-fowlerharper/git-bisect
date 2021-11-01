@@ -14,9 +14,14 @@ function divide (a, b) {
   return a / b
 }
 
+function pretendIAmReallyAdvanced (a, b) {
+  return 'Hello World'
+}
+
 module.exports = {
   add,
   subtract,
   multiply,
-  divide
+  divide,
+  pretendIAmReallyAdvanced
 }
