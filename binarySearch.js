@@ -1,3 +1,5 @@
+#!/usr/bin/env node
+
 const array = require('./array')
 
 function createLargeSortedArray (length = 1000) {
