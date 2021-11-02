@@ -8,4 +8,4 @@ const [ value1, index1, numIterations1 ] = binarySearch(array, userInput)
 const [ value2, index2, numIterations2 ] = linearSearch(array, userInput)
 
 console.log(`Binary Search - Value found: ${value1} at index: ${index1}, Iterations: ${numIterations1}`)
-console.log(`Linear Search - Value found: ${value2} at index: ${index1}, Iterations: ${numIterations2}`)
+console.log(`Linear Search - Value found: ${value2} at index: ${index2}, Iterations: ${numIterations2}`)
